@@ -1,3 +1,3 @@
 UPDATE dailyProgress
-SET bmi = 20, calories = 2400
-WHERE day = 3;
+SET day=1, bmi = 20, calories = 2400
+WHERE day = 13;

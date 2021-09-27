@@ -1,5 +1,7 @@
+
 CREATE TABLE dailyProgress (
-    day integer PRIMARY KEY AUTOINCREMENT,
+    id integer PRIMARY KEY AUTOINCREMENT,
+    day integer,
     weight integer,
     bmi real,
     calories integer

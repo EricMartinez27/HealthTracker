@@ -18,10 +18,10 @@ namespace AppLibrary
             using var reader = command.ExecuteReader();
             while (reader.Read())
             {
-                var day = reader.GetInt32(0);
-                var weight = reader.GetInt32(1);
-                var bmi = reader.GetDouble(2);
-                var calories = reader.GetInt32(3);
+                var day = reader.GetInt32(1);
+                var weight = reader.GetInt32(2);
+                var bmi = reader.GetDouble(3);
+                var calories = reader.GetInt32(4);
                 Console.WriteLine($"Day: {day}, Weight: {weight}, BMI: {bmi}, Calories: {calories}");
             }
         }
@@ -34,11 +34,11 @@ namespace AppLibrary
             int userCalories;
             Console.WriteLine("Please enter the day you want to update:");
             userDay = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the weight you want to update:");
+            Console.WriteLine("Please enter the weight:");
             userWeight = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter the BMI you want to update:");
+            Console.WriteLine("Please enter the BMI:");
             userBmi = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Please enter the calories you want to update:");
+            Console.WriteLine("Please enter the calories:");
             userCalories = Convert.ToInt32(Console.ReadLine());
 
             using var connection = new SqliteConnection("Data Source=./AppLibrary/data/healthtracking.db");
