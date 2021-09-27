@@ -1,4 +1,5 @@
 ﻿using System;
+using AppLibrary;
 
 namespace MainApp
 {
@@ -6,7 +7,10 @@ namespace MainApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           Sql.Update();
+           Sql.Delete();
+           Sql.Query();
+
         }
     }
 }
